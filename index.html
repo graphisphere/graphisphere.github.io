@@ -3,1433 +3,476 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GraphiSphere | Digital Art & Visual Design Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Exclusive Mobile Access – Ghana Users</title>
     <style>
-        :root {
-            --primary: #4A5CFF;
-            --primary-dark: #3A4BEA;
-            --secondary: #FF6B8B;
-            --accent: #00D4AA;
-            --dark: #1A1D2B;
-            --dark-light: #2A2D3E;
-            --light: #F8FAFF;
-            --gray: #8A93A5;
-            --gray-light: #EFF2F8;
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 15px 50px rgba(0, 0, 0, 0.12);
-            --border-radius: 12px;
-            --container-width: 1280px;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        
         body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark);
-            background-color: var(--light);
-            line-height: 1.7;
-            overflow-x: hidden;
-            font-weight: 400;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f6f8 0%, #e9ecef 100%);
+            color: #222;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            line-height: 1.2;
-        }
-
+        
         .container {
+            max-width: 420px;
             width: 100%;
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section {
-            padding: 6rem 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-            position: relative;
-        }
-
-        .section-header h2 {
-            font-size: 3rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            font-size: 1.125rem;
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .section-line {
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            margin: 1.5rem auto;
-            border-radius: 3px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            gap: 0.75rem;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            box-shadow: 0 4px 15px rgba(74, 92, 255, 0.25);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(74, 92, 255, 0.35);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: rgba(248, 250, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        header.scrolled {
-            padding: 0.5rem 0;
-            background-color: rgba(248, 250, 255, 0.98);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-            transition: var(--transition);
-        }
-
-        header.scrolled .nav-container {
-            padding: 1rem 0;
-        }
-
-        /* UPDATED LOGO */
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-
-        .logo-icon::before {
-            content: '';
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            border: 3px solid white;
-            border-radius: 50%;
-            border-top-color: transparent;
-            border-right-color: transparent;
-            transform: rotate(45deg);
-        }
-        .logo-icon::after {
-            content: '';
-            position: absolute;
-            width: 7px;
-            height: 3px;
-            background-color: white;
-            border-radius: 2px;
-            transform: rotate(45deg) translate(8px, 1px);
-        }
-
-        .logo-text {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        .logo-text span {
-            font-weight: 400;
-            color: var(--gray);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            font-size: 1rem;
-            transition: var(--transition);
-            position: relative;
-            padding: 0.5rem 0;
-        }
-
-        nav ul li a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            bottom: 0;
-            left: 0;
-            transition: var(--transition);
-        }
-
-        nav ul li a:hover:after,
-        nav ul li a.active:after {
-            width: 100%;
-        }
-
-        nav ul li a.active {
-            color: var(--primary);
-        }
-
-        .nav-cta {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .mobile-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--dark);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 12rem 0 8rem;
-            background: linear-gradient(135deg, #F8FAFF 0%, #F0F5FF 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero:before {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(74, 92, 255, 0.08) 0%, rgba(0, 212, 170, 0.05) 100%);
-            top: -300px;
-            right: -200px;
-            z-index: 0;
-        }
-
-        .hero:after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(255, 107, 139, 0.05) 0%, rgba(74, 92, 255, 0.08) 100%);
-            bottom: -200px;
-            left: -100px;
-            z-index: 0;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-        }
-
-        .hero-subtitle {
-            color: var(--primary);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.875rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .hero-subtitle:before {
-            content: '';
-            width: 30px;
-            height: 2px;
-            background: var(--primary);
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--gray);
-            margin-bottom: 3rem;
-            max-width: 600px;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 3rem;
-            margin-top: 5rem;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--gray);
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Portfolio Section */
-        .portfolio-filter {
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.75rem 1.75rem;
-            background: white;
-            border: 1px solid var(--gray-light);
-            border-radius: 50px;
-            font-weight: 500;
-            color: var(--gray);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .portfolio-item {
-            background: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            position: relative;
-            opacity: 1;
-            display: block;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .portfolio-img {
-            height: 280px;
-            background-color: var(--gray-light);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .portfolio-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .portfolio-item:hover .portfolio-img img {
-            transform: scale(1.05);
-        }
-
-        .img-dimensions {
-            font-size: 0.75rem;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            margin-top: 0.5rem;
-            font-weight: 500;
-        }
-
-        .portfolio-category {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--primary);
-            box-shadow: var(--shadow-sm);
-            z-index: 2;
-        }
-
-        .portfolio-info {
-            padding: 2rem;
-        }
-
-        .portfolio-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .portfolio-info p {
-            color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .portfolio-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tag {
-            background: var(--gray-light);
-            color: var(--dark-light);
-            padding: 0.4rem 0.9rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        .portfolio-cta {
-            text-align: center;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--dark);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about:before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(74, 92, 255, 0.1) 0%, rgba(0, 212, 170, 0.05) 100%);
-            top: -250px;
-            left: -250px;
-        }
-
-        .about-content {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-text p {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 2rem;
-        }
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        .expertise-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            transition: var(--transition);
-        }
-
-        .expertise-item:hover {
+        
+        .container:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(74, 92, 255, 0.3);
         }
-
-        .expertise-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .expertise-item h3 {
-            color: white;
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .expertise-item p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
-        /* Clients Section */
-        .clients {
-            background: var(--gray-light);
-        }
-
-        .clients-logos {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .client-logo {
-            color: var(--gray);
-            font-weight: 700;
-            font-size: 1.25rem;
-            opacity: 0.7;
-            transition: var(--transition);
-        }
-
-        .client-logo:hover {
-            opacity: 1;
-            color: var(--primary);
-        }
-
-        /* Contact CTA */
-        .contact-cta {
+        
+        .header {
+            background: linear-gradient(90deg, #ffcc00 0%, #ffaa00 100%);
+            padding: 25px 20px;
             text-align: center;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            border-radius: var(--border-radius);
-            padding: 5rem;
-            margin: 0 auto;
-            max-width: 900px;
-            box-shadow: var(--shadow-lg);
+            position: relative;
         }
-
-        .contact-cta h2 {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M1200 120L0 16.48 0 0 1200 0 1200 120z' fill='%23ffffff'/%3E%3C/svg%3E");
+            background-size: cover;
         }
-
-        .contact-cta p {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 800;
+            color: #222;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
         }
-
-        .contact-cta .btn {
-            background: white;
-            color: var(--primary);
+        
+        .content {
+            padding: 25px;
         }
-
-        .contact-cta .btn:hover {
-            background: var(--accent);
-            color: white;
+        
+        .badge {
+            background: linear-gradient(90deg, #e53935 0%, #d32f2f 100%);
+            color: #fff;
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(229, 57, 53, 0.2);
         }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 5rem 0 2rem;
+        
+        .intro-text {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #444;
         }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 3rem;
-            margin-bottom: 4rem;
+        
+        .network-list {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 4px solid #ffcc00;
         }
-
-        .footer-column h3 {
-            color: white;
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
+        
+        .network-list h3 {
+            margin-bottom: 15px;
+            color: #222;
+            font-size: 18px;
         }
-
-        .footer-column p {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 1.5rem;
+        
+        .features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
         }
-
-        .social-links {
+        
+        .features li {
+            padding: 14px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 15px;
             display: flex;
-            gap: 1rem;
+            align-items: center;
         }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
+        
+        .features li:last-child {
+            border-bottom: none;
+        }
+        
+        .features li::before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 12px;
+            background: #e8f5e9;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
+            flex-shrink: 0;
         }
-
-        .social-links a:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .footer-links li {
-            list-style: none;
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: var(--transition);
-            font-size: 0.95rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-            padding-left: 5px;
-        }
-
-        .copyright {
+        
+        /* Fixed Image Section */
+        .image-box {
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.875rem;
+            margin: 30px 0;
+            background: white;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 2px solid #ffcc00;
         }
 
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero h1 {
-                font-size: 3.25rem;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            }
+        .image-header {
+            background: linear-gradient(90deg, #ffcc00, #ffaa00);
+            padding: 15px 20px;
+            color: #222;
+            position: relative;
         }
 
-        @media (max-width: 768px) {
+        .exclusive-badge {
+            background: #e53935;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .access-title {
+            font-size: 22px;
+            font-weight: 800;
+            margin: 5px 0;
+        }
+
+        .access-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 3px solid #ffcc00;
+            border-top: 3px solid #ffcc00;
+        }
+
+        .image-footer {
+            padding: 15px 20px;
+            background: #f8f9fa;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .highlight {
+            color: #e53935;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .highlight:not(:last-child)::after {
+            content: "•";
+            margin-left: 15px;
+            color: #999;
+        }
+        /* End Fixed Image Section */
+        
+        .cta {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .cta button {
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #28a745 0%, #218838 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 0 #1e7e34;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta button:hover {
+            background: linear-gradient(90deg, #218838 0%, #1e7e34 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 9px 0 #1c7430;
+        }
+        
+        .cta button:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 0 #1c7430;
+        }
+        
+        .cta button::after {
+            content: '→';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            transition: right 0.3s ease;
+        }
+        
+        .cta button:hover::after {
+            right: 15px;
+        }
+        
+        .timer-container {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+            border: 2px solid #ffcc00;
+        }
+        
+        .timer-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .timer {
+            font-size: 28px;
+            font-weight: 800;
+            color: #e53935;
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .footer {
+            font-size: 12px;
+            color: #666;
+            padding: 20px;
+            text-align: center;
+            background: #f8f9fa;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer span {
+            display: block;
+            margin-top: 5px;
+        }
+        
+        .carrier-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .carrier-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .mtn { background: linear-gradient(135deg, #ffcc00 0%, #ff9900 100%); }
+        .vodafone { background: linear-gradient(135deg, #e60000 0%, #cc0000 100%); }
+        .airteltigo { background: linear-gradient(135deg, #e30613 0%, #c20510 100%); }
+        
+        @media (max-width: 480px) {
             .container {
-                padding: 0 1.5rem;
+                border-radius: 12px;
             }
             
-            .section {
-                padding: 4rem 0;
+            .header h1 {
+                font-size: 22px;
             }
             
-            .section-header h2 {
-                font-size: 2.5rem;
+            .content {
+                padding: 20px;
             }
             
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
+            .access-title {
+                font-size: 20px;
+            }
+            
+            .footer-text {
+                gap: 10px;
                 flex-direction: column;
-                padding: 2rem;
-                box-shadow: var(--shadow-md);
-                z-index: 1000;
-            }
-            
-            nav ul.active {
-                display: flex;
-            }
-            
-            .mobile-toggle {
-                display: block;
-            }
-            
-            .hero {
-                padding: 9rem 0 5rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.75rem;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            }
-            
-            .expertise-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-cta {
-                padding: 3rem 1.5rem;
-            }
-            
-            .clients-logos {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-btns {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-stats {
-                justify-content: center;
-                gap: 2rem;
-            }
-            
-            .stat-item {
                 align-items: center;
+            }
+            
+            .highlight:not(:last-child)::after {
+                display: none;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <div class="nav-container">
-                <a href="#" class="logo">
-                    <div class="logo-icon"></div>
-                    <div class="logo-text">Graphi<span>Sphere</span></div>
-                </a>
-                
-                <nav>
-                    <ul id="mainNav">
-                        <li><a href="#home" class="active">Home</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#clients">Clients</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="nav-cta">
-                    <a href="#contact" class="btn btn-outline">Get Quote</a>
-                    <div class="mobile-toggle" id="mobileToggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="header">
+            <h1>Ghana Mobile Users Only</h1>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-subtitle">Premium Digital Art Studio</div>
-                <h1>Visual Excellence in <span>Digital Art & Design</span></h1>
-                <p>GraphiSphere creates sophisticated digital artworks for global brands and innovative businesses. Specializing in high-quality vector illustrations, 3D visualization, and bespoke design solutions.</p>
-                
-                <div class="hero-btns">
-                    <a href="#portfolio" class="btn btn-primary">
-                        <i class="fas fa-eye"></i> View Portfolio
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-paper-plane"></i> Start a Project
-                    </a>
-                </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">150+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">40+</div>
-                        <div class="stat-label">Global Clients</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">8+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="section" id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Works</h2>
-                <div class="section-line"></div>
-                <p>A curated selection of premium digital artworks showcasing technical excellence and creative vision.</p>
-            </div>
+        <div class="content">
+            <div class="badge">Limited Slots Available</div>
             
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all">All Works</button>
-                <button class="filter-btn" data-filter="vector">Vector Art</button>
-                <button class="filter-btn" data-filter="nature">Nature</button>
-                <button class="filter-btn" data-filter="peaceful">Peaceful</button>
-                <button class="filter-btn" data-filter="abstract">Abstract & Fine Art</button>
-                <button class="filter-btn" data-filter="wallpaper">Wallpaper</button>
-            </div>
+            <p class="intro-text">
+                You have been selected to activate exclusive mobile entertainment access available for Ghanaian users:
+            </p>
             
-            <div class="portfolio-grid">
-                <!-- VECTOR ART - 3 ITEMS WITH ACTUAL IMAGES -->
-                <div class="portfolio-item" data-category="vector">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Vector Art</div>
-                        <img src="https://tint.creativemarket.com/5hnR64Q7KpPhco2cWR0JL9YOD1vkyBlTqvekqNK7rac/width:1200/height:800/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzIyMjkvMjIyOTMvMjIyOTMxMDQvYXJyb3dzLW8uanBn?1683298117" alt="Arrow Flow Vector Art">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Arrow Flow</h3>
-                        <p>Directional vector patterns</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Geometric</span>
-                            <span class="tag">Flow</span>
-                            <span class="tag">Directional</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="vector">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Vector Art</div>
-                        <img src="https://tint.creativemarket.com/qwyxjbnQeOggekVPMWkTM1eLiV7UUJnlWEE9WzgFHbE/width:1200/height:800/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzIyMjkvMjIyOTMvMjIyOTMxMDcvc3Rhci1zaGFwZXMtby5qcGc?1683298123" alt="Star Shapes Vector Art">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Star Shapes</h3>
-                        <p>Celestial vector elements</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Celestial</span>
-                            <span class="tag">Shapes</span>
-                            <span class="tag">Stars</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="vector">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Vector Art</div>
-                        <img src="https://tint.creativemarket.com/qknAuWRLvM4tTswyLhXwdZK6OPCc5RT2YgK1pM3Sqfk/width:1200/height:800/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzIyMjkvMjIyOTMvMjIyOTMxMDYvc3Rhci1zaGFwZXMzLW8uanBn?1683298117" alt="Geometric Stars Vector Art">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Geometric Stars</h3>
-                        <p>Patterned star formations</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Geometric</span>
-                            <span class="tag">Pattern</span>
-                            <span class="tag">Stars</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- NATURE - 3 ITEMS WITH ACTUAL IMAGES -->
-                <div class="portfolio-item" data-category="nature">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Nature</div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG4ybf_e6P-ZaPNQRkdL3nf7A7d4K0qzCytA&s" alt="Mountain Sunrise">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Mountain Sunrise</h3>
-                        <p>Golden hour landscape</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Mountains</span>
-                            <span class="tag">Sunrise</span>
-                            <span class="tag">Golden Hour</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="nature">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Nature</div>
-                        <img src="https://img.freepik.com/free-photo/beautiful-nature-landscape-with-black-sandy-beach-ocean_23-2151380422.jpg?semt=ais_hybrid&w=740&q=80" alt="Ocean Waves">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Ocean Waves</h3>
-                        <p>Coastal marine scenery</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Ocean</span>
-                            <span class="tag">Beach</span>
-                            <span class="tag">Coastal</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="nature">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Nature</div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRYy4iv3RSxhhhYm-MbSmhv-3YNPh4w6suNA&s" alt="Forest Path">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Forest Path</h3>
-                        <p>Woodland trail scenery</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Forest</span>
-                            <span class="tag">Path</span>
-                            <span class="tag">Woodland</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- PEACEFUL - 3 ITEMS WITH ACTUAL IMAGES -->
-                <div class="portfolio-item" data-category="peaceful">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Peaceful</div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIb0fD3Ac8s3WDHZWR53ol7YmGmdpwUOiMFQ&s" alt="Zen Garden">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Zen Garden</h3>
-                        <p>Serene meditation space</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Zen</span>
-                            <span class="tag">Meditation</span>
-                            <span class="tag">Garden</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="peaceful">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Peaceful</div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz93XICkUXv6xsnRC3dDCj-pSLfdChYUGlVg&s" alt="Cloud Meditation">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Cloud Meditation</h3>
-                        <p>Sky serenity and calm</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Clouds</span>
-                            <span class="tag">Sky</span>
-                            <span class="tag">Serene</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="peaceful">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Peaceful</div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAfVWQRKc2ga_FdZA9OwLaxIAnzPEVYsDdnQ&s" alt="Night Stillness">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Night Stillness</h3>
-                        <p>Tranquil night scenes</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Night</span>
-                            <span class="tag">Tranquil</span>
-                            <span class="tag">Stillness</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- ABSTRACT & FINE ART - 3 ITEMS WITH ACTUAL IMAGES -->
-                <div class="portfolio-item" data-category="abstract">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Abstract Art</div>
-                        <img src="https://images.pexels.com/photos/33609045/pexels-photo-33609045/free-photo-of-abstract-fluid-art-with-flowing-patterns.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Abstract Fluid Dynamics Art">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Fluid Dynamics</h3>
-                        <p>Flowing abstract patterns and colors</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Fluid</span>
-                            <span class="tag">Abstract</span>
-                            <span class="tag">Color Flow</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="abstract">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Abstract Art</div>
-                        <img src="https://images.stockcake.com/public/4/5/4/454c4266-8013-438a-95a5-61fda471cc34_large/emotional-color-wheel-stockcake.jpg" alt="Emotional Color Spectrum Art">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Emotional Spectrum</h3>
-                        <p>Color theory and emotional expression</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Color Theory</span>
-                            <span class="tag">Emotional</span>
-                            <span class="tag">Spectrum</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="abstract">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Abstract Art</div>
-                        <img src="https://www.bibalex.org/SCIplanet/Attachments/Article/MediumImage/BNULwETr99_20250423083416655.jpg" alt="Abstract Geological Forms Art">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Geological Forms</h3>
-                        <p>Abstracted earth and rock formations</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Geological</span>
-                            <span class="tag">Earth</span>
-                            <span class="tag">Textural</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- WALLPAPER - 3 ITEMS WITH ACTUAL IMAGES -->
-                <div class="portfolio-item" data-category="wallpaper">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Wallpaper</div>
-                        <img src="https://tint.creativemarket.com/HBvoENVWhvlRzE9NycFkv0Msu1CbzYEmxdughH4etng/width:1200/height:800/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzUzNjQvNTM2NDIvNTM2NDI0MjQvaW50XzEtby5qcGcjMTc0OTMwNzk4Mg?1749307982" alt="Geometric Pattern Wallpaper">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Geometric Harmony</h3>
-                        <p>Modern geometric patterns</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Geometric</span>
-                            <span class="tag">Pattern</span>
-                            <span class="tag">Modern</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="wallpaper">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Wallpaper</div>
-                        <img src="https://tint.creativemarket.com/za0TMQTjUv7f1c3jWrh64WWSXqFpEwjkbmJewXsQJ2k/width:1200/height:800/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzUzOTIvNTM5MjMvNTM5MjM0MzgvaW50NC1vLmpwZyMxNzUyNzY2NTYz?1752766563" alt="Watercolor Texture Wallpaper">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Watercolor Flow</h3>
-                        <p>Soft watercolor textures</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Watercolor</span>
-                            <span class="tag">Soft</span>
-                            <span class="tag">Texture</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="wallpaper">
-                    <div class="portfolio-img">
-                        <div class="portfolio-category">Wallpaper</div>
-                        <img src="https://tint.creativemarket.com/I3GjSe5QDvvuouoRFLI-GqTA8jTVI8zfJjflMueaXhI/width:1200/height:800/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzUzOTIvNTM5MjMvNTM5MjM0NDQvJUQwJUJDJUQwJUJFJUQwJUJEJUQxJTgxJUQxJTgyJUQwJUI1JUQxJTgwJUQwJUIwLSVEMCVCQSVEMCVCRSVEMCVCRiVEMCVCOCVEMSU4Ri1vLmpwZyMxNzUyNzY2NTY1?1752766565" alt="Organic Texture Wallpaper">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Organic Texture</h3>
-                        <p>Natural organic patterns</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Organic</span>
-                            <span class="tag">Natural</span>
-                            <span class="tag">Texture</span>
-                        </div>
-                    </div>
+            <div class="network-list">
+                <h3>Supported Carriers:</h3>
+                <div class="carrier-icons">
+                    <div class="carrier-icon mtn">MTN<br>Ghana</div>
+                    <div class="carrier-icon vodafone">Vodafone<br>Ghana</div>
+                    <div class="carrier-icon airteltigo">AirtelTigo</div>
                 </div>
             </div>
             
-            <div class="portfolio-cta">
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-briefcase"></i> Request Full Portfolio
-                </a>
+            <ul class="features">
+                <li>Android devices only</li>
+                <li>No credit card required</li>
+                <li>Fast mobile activation</li>
+                <li>Cancel anytime</li>
+                <li>Unlimited access to premium content</li>
+            </ul>
+            
+            <!-- Fixed Image Section -->
+            <div class="image-box">
+                <div class="image-header">
+                    <span class="exclusive-badge">EXCLUSIVE</span>
+                    <h3 class="access-title">Mobile Access</h3>
+                    <p class="access-subtitle">Exclusive mobile content access for Ghana users</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mobile Entertainment">
+                <div class="image-footer">
+                    <div class="footer-text">
+                        <span class="highlight">Android Only</span>
+                        <span class="highlight">Ghana Carriers</span>
+                        <span class="highlight">Instant Access</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section - Updated Categories -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>Studio Expertise</h2>
-                <div class="section-line"></div>
-                <p>Combining artistic vision with technical precision to deliver exceptional digital art solutions.</p>
+            <!-- End Fixed Image Section -->
+            
+            <div class="cta">
+                <button onclick="goOffer()">ACTIVATE NOW</button>
             </div>
             
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Artistic Excellence Meets Technical Mastery</h2>
-                    <p>GraphiSphere specializes in creating premium digital artworks for discerning clients worldwide. Our approach combines traditional artistic principles with cutting-edge digital techniques.</p>
-                    <p>With over eight years of experience, our studio has developed a reputation for delivering visually stunning and technically impeccable artwork across diverse industries and applications.</p>
-                    
-                    <div class="hero-btns" style="margin-top: 3rem;">
-                        <a href="#contact" class="btn btn-primary">
-                            <i class="fas fa-calendar-check"></i> Schedule Consultation
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="expertise-grid">
-                    <div class="expertise-item">
-                        <div class="expertise-icon">
-                            <i class="fas fa-vector-square"></i>
-                        </div>
-                        <h3>Vector Art</h3>
-                        <p>Precision vector artwork for branding and commercial applications</p>
-                    </div>
-                    
-                    <div class="expertise-item">
-                        <div class="expertise-icon">
-                            <i class="fas fa-mountain"></i>
-                        </div>
-                        <h3>Nature</h3>
-                        <p>Natural landscape and environmental art showcasing Earth's beauty</p>
-                    </div>
-                    
-                    <div class="expertise-item">
-                        <div class="expertise-icon">
-                            <i class="fas fa-spa"></i>
-                        </div>
-                        <h3>Peaceful</h3>
-                        <p>Tranquil and serene compositions for calm environments</p>
-                    </div>
-                    
-                    <div class="expertise-item">
-                        <div class="expertise-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h3>Abstract & Fine Art</h3>
-                        <p>Contemporary abstract compositions for modern spaces</p>
-                    </div>
-                </div>
+            <div class="timer-container">
+                <div class="timer-label">Offer expires in:</div>
+                <div class="timer" id="countdown">04:59</div>
             </div>
         </div>
-    </section>
 
-    <!-- Clients Section -->
-    <section class="section clients" id="clients">
-        <div class="container">
-            <div class="section-header">
-                <h2>Selected Clients</h2>
-                <div class="section-line"></div>
-                <p>We've had the privilege of collaborating with leading brands and innovative organizations.</p>
-            </div>
-            
-            <div class="clients-logos">
-                <div class="client-logo">TECHNOVA</div>
-                <div class="client-logo">VERIDIAN</div>
-                <div class="client-logo">AURORA</div>
-                <div class="client-logo">NEXUS</div>
-                <div class="client-logo">ELEVATE</div>
-            </div>
+        <div class="footer">
+            This promotion is provided by third-party partners.
+            <span>Carrier charges may apply. Internet connection required.</span>
         </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="contact-cta">
-                <h2>Start Your Project</h2>
-                <p>Ready to elevate your brand with premium digital art? Contact us to discuss your project requirements, timeline, and vision.</p>
-                <a href="mailto:contact@graphisphere.example.com" class="btn">
-                    <i class="fas fa-envelope"></i> contact@graphisphere.example.com
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer - Updated Services -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>GraphiSphere</h3>
-                    <p>Premium digital art studio specializing in vector illustration, nature art, and bespoke design solutions for global clients.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-behance"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#portfolio">Vector Art</a></li>
-                        <li><a href="#portfolio">Nature</a></li>
-                        <li><a href="#portfolio">Peaceful</a></li>
-                        <li><a href="#portfolio">Abstract Art</a></li>
-                        <li><a href="#portfolio">Wallpaper</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Navigation</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#clients">Clients</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> contact@graphisphere.example.com</li>
-                        <li><i class="fas fa-phone" style="margin-right: 10px;"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Global Studio • Remote Collaboration</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 GraphiSphere. All rights reserved. | Premium Digital Art & Design</p>
-            </div>
-        </div>
-    </footer>
+    </div>
 
     <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+        function goOffer() {
+            // Your Mobidea Smartlink
+            window.location.href = 'https://www.lisabergtrain.support/click?offer_id=34205&pub_id=254985&pub_click_id=ADD_CLICK_ID_HERE&site=PASS_SITE_HERE';
+        }
 
-        // Portfolio filtering - FIXED VERSION
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        // Countdown timer
+        let time = 299; // 4 minutes 59 seconds
+        const countdownEl = document.getElementById("countdown");
         
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
+        function updateTimer() {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            countdownEl.textContent =
+                (minutes < 10 ? "0" : "") + minutes + ":" +
+                (seconds < 10 ? "0" : "") + seconds;
+            
+            if (time <= 0) {
+                clearInterval(timerInterval);
+                countdownEl.textContent = "00:00";
+                countdownEl.style.color = "#999";
+                document.querySelector(".timer-label").textContent = "Offer has expired!";
                 
-                const filterValue = button.getAttribute('data-filter');
-                
-                // Filter portfolio items
-                portfolioItems.forEach(item => {
-                    const itemCategory = item.getAttribute('data-category');
-                    
-                    if (filterValue === 'all' || itemCategory === filterValue) {
-                        item.style.display = 'block';
-                        // Force reflow for smooth transition
-                        item.offsetHeight;
-                        item.style.opacity = '1';
-                    } else {
-                        item.style.opacity = '0';
-                        setTimeout(() => {
-                            if (itemCategory !== filterValue && filterValue !== 'all') {
-                                item.style.display = 'none';
-                            }
-                        }, 300);
-                    }
-                });
-            });
-        });
-
-        // Mobile navigation toggle - FIXED VERSION
-        const mobileToggle = document.getElementById('mobileToggle');
-        const mainNav = document.getElementById('mainNav');
-        
-        mobileToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            mobileToggle.innerHTML = mainNav.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mainNav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mainNav.classList.remove('active');
-                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-
-        // Update nav on resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                mainNav.classList.remove('active');
-                mainNav.style.display = 'flex';
-                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                // Disable the button when timer expires
+                const activateBtn = document.querySelector('.cta button');
+                activateBtn.disabled = true;
+                activateBtn.style.background = '#cccccc';
+                activateBtn.style.boxShadow = '0 6px 0 #999999';
+                activateBtn.textContent = 'OFFER EXPIRED';
+                activateBtn.style.cursor = 'not-allowed';
+                activateBtn.onclick = null;
             } else {
-                mainNav.style.display = 'none';
+                time--;
             }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    // Close mobile menu if open
-                    if (window.innerWidth <= 768) {
-                        mainNav.classList.remove('active');
-                        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                    }
-                    
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Set active nav link based on scroll position
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
+        }
+        
+        // Update the timer every second
+        const timerInterval = setInterval(updateTimer, 1000);
+        
+        // Initialize timer immediately
+        updateTimer();
+        
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation to badge
+            const badge = document.querySelector('.badge');
+            setInterval(() => {
+                badge.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    badge.style.transform = 'scale(1)';
+                }, 300);
+            }, 3000);
             
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 150)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Initialize portfolio items display
-        window.addEventListener('DOMContentLoaded', () => {
-            portfolioItems.forEach(item => {
-                item.style.display = 'block';
-                item.style.opacity = '1';
+            // Add click tracking (optional)
+            document.querySelector('.cta button').addEventListener('click', function() {
+                // You can add tracking code here if needed
+                console.log('Activate button clicked - redirecting to offer');
             });
         });
     </script>
