@@ -1,169 +1,129 @@
-<div id="pp-giveaway-wrapper">
+<div id="sb-pro-wrapper">
 
 <style>
-#pp-giveaway-wrapper {
-  font-family: Arial, sans-serif;
-  max-width: 500px;
-  margin: 40px auto;
+#sb-pro-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  max-width: 650px;
+  margin: 50px auto;
   background: #ffffff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
   text-align: center;
 }
 
-#pp-giveaway-wrapper h1 {
-  color: #003087;
-  font-size: 24px;
+#sb-pro-wrapper h1 {
+  font-size: 28px;
+  color: #1f2937;
   margin-bottom: 10px;
 }
 
-#pp-giveaway-wrapper .highlight {
-  color: #009cde;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-#pp-giveaway-wrapper .step { display: none; }
-#pp-giveaway-wrapper .step.active { display: block; }
-
-#pp-giveaway-wrapper button {
-  width: 100%;
-  padding: 14px;
-  margin-top: 10px;
-  background: #0070ba;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
+#sb-pro-wrapper .subheadline {
   font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
+  color: #6b7280;
+  margin-bottom: 25px;
 }
 
-#pp-giveaway-wrapper button:hover {
-  background: #003087;
+#sb-pro-wrapper .bonus-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
 }
 
-#pp-giveaway-wrapper .option-btn {
-  background: #f2f2f2;
-  color: #333;
+#sb-pro-wrapper .bonus-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #16a34a;
 }
 
-#pp-giveaway-wrapper .option-btn:hover {
-  background: #009cde;
-  color: #fff;
+#sb-pro-wrapper .steps {
+  text-align: left;
+  margin: 30px 0;
+  font-size: 15px;
+  color: #374151;
 }
 
-#pp-giveaway-wrapper input {
-  width: 100%;
-  padding: 12px;
-  margin-top: 8px;
+#sb-pro-wrapper .steps h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#sb-pro-wrapper .steps li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+#sb-pro-wrapper .cta-btn {
+  display: inline-block;
+  background: #16a34a;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 16px 28px;
+  font-size: 17px;
+  font-weight: 600;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  transition: 0.3s ease;
+  margin-top: 20px;
 }
 
-#pp-giveaway-wrapper .footer {
-  font-size: 12px;
-  color: #666;
-  margin-top: 15px;
+#sb-pro-wrapper .cta-btn:hover {
+  background: #15803d;
+}
+
+#sb-pro-wrapper .trust {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+#sb-pro-wrapper .divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 30px 0;
 }
 
 @media (max-width:600px){
-  #pp-giveaway-wrapper {
+  #sb-pro-wrapper {
     margin: 20px;
-    padding: 20px;
+    padding: 25px;
   }
 }
 </style>
 
-<canvas id="confettiCanvas" style="position:fixed;top:0;left:0;pointer-events:none;"></canvas>
-
-<h1>Win a <span class="highlight">$100 Gift Card</span></h1>
-<p>US Residents Only – Limited Promotion</p>
-
-<!-- STEP 1 -->
-<div class="step active">
-  <h3>Are you a US resident?</h3>
-  <button class="option-btn" onclick="nextStep()">Yes</button>
-  <button class="option-btn">No</button>
+<h1>Join Swagbucks & Receive a $3 Welcome Bonus</h1>
+<div class="subheadline">
+Create a free account and start earning rewards for everyday online activities.
 </div>
 
-<!-- STEP 2 -->
-<div class="step">
-  <h3>How often do you use PayPal?</h3>
-  <button class="option-btn" onclick="nextStep()">Daily</button>
-  <button class="option-btn" onclick="nextStep()">Weekly</button>
-  <button class="option-btn" onclick="nextStep()">Rarely</button>
+<div class="bonus-box">
+  <div class="bonus-amount">$3 Bonus Reward</div>
+  <div>Available to eligible new members (US only).</div>
 </div>
 
-<!-- STEP 3 -->
-<div class="step">
-  <h3>Enter Your Details</h3>
-  <form id="ppForm">
-    <input type="text" placeholder="First Name" required>
-    <input type="email" placeholder="Email Address" required>
-    <button type="submit">Check Availability</button>
-  </form>
+<div class="steps">
+  <h3>How It Works</h3>
+  <ul>
+    <li>✔ Register for a free Swagbucks account</li>
+    <li>✔ Confirm your email address</li>
+    <li>✔ Begin earning rewards through surveys, shopping, and online offers</li>
+    <li>✔ Receive your $3 welcome bonus after qualifying activity</li>
+  </ul>
 </div>
 
-<div class="footer">
-No purchase necessary. 18+ US residents only.  
-Not sponsored, endorsed, or administered by PayPal.
+<a class="cta-btn" href="https://confirmapp.store/sl/1zpkq" target="_blank">
+Create Your Free Account
+</a>
+
+<div class="divider"></div>
+
+<div class="trust">
+• Free membership<br>
+• US residents, 18+ only<br>
+• Bonus subject to Swagbucks terms and qualifying actions<br><br>
+This page is an independent promotional page and is not affiliated with or endorsed by Swagbucks.
 </div>
-
-<script>
-function nextStep(){
-  const steps = document.querySelectorAll('#pp-giveaway-wrapper .step');
-  let current = 0;
-  steps.forEach((step, i)=>{
-    if(step.classList.contains('active')){
-      current = i;
-      step.classList.remove('active');
-    }
-  });
-  steps[current+1].classList.add('active');
-}
-
-document.getElementById("ppForm").addEventListener("submit", function(e){
-  e.preventDefault();
-  launchConfetti();
-  setTimeout(function(){
-    window.location.href="https://confirmapp.store/sl/1zpkq";
-  },1500);
-});
-
-/* Confetti */
-function launchConfetti(){
-  const canvas=document.getElementById('confettiCanvas');
-  const ctx=canvas.getContext('2d');
-  canvas.width=window.innerWidth;
-  canvas.height=window.innerHeight;
-
-  const pieces=[];
-  for(let i=0;i<120;i++){
-    pieces.push({
-      x:Math.random()*canvas.width,
-      y:Math.random()*canvas.height,
-      r:Math.random()*6+4,
-      d:Math.random()*50,
-      color:["#003087","#0070ba","#009cde","#ffd700"][Math.floor(Math.random()*4)]
-    });
-  }
-
-  function draw(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    pieces.forEach(p=>{
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=p.color;
-      ctx.fill();
-      p.y+=Math.cos(p.d)+1+p.r/2;
-      if(p.y>canvas.height) p.y=-10;
-    });
-  }
-
-  setInterval(draw,20);
-}
-</script>
 
 </div>
